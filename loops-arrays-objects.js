@@ -15,6 +15,12 @@
 // 	'Beste Otis, je salaris van €2800,- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.',
 // ==========================================
 
+// INPUT : object
+// OUTPUT: zie voorbeels
+// STEPS:
+// itereer de salarissen op basis van length
+// voeg de tekst toe
+
 const salaryDetails = [
 	{name: 'Max', salary: 3200},
 	{name: 'Sophia', salary: 2350},
@@ -22,6 +28,14 @@ const salaryDetails = [
 	{name: 'Nina', salary: 3500},
 	{name: 'Otis', salary: 2800}
 ];
+const textPre = "Beste "
+const textMiddle = ", je salaris van €"
+const textEnd = ",- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.'"
+
+for (let i = 0; i < salaryDetails.length; i++) {
+	console.log(textPre + salaryDetails[i].name + textMiddle + salaryDetails[i].salary + textEnd);
+
+}
 
 // ==========================================
 // Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
@@ -36,6 +50,14 @@ const salaryDetails = [
 // 	'Otis heeft nog 18 vakantiedagen over.',
 // ==========================================
 
+// INPUT : object
+// OUTPUT: zie voorbeels
+// STEPS:
+// itereer de vakantiedagen op basis van length
+// itereer de gebruikte dagen
+// trek de dagen van elkaar af
+// voeg de tekst toe
+
 const vacationDays = [
 	{name: 'Max', totalVacationDays: 25, usedVacationDays: 10},
 	{name: 'Sophia', totalVacationDays: 30, usedVacationDays: 15},
@@ -44,6 +66,13 @@ const vacationDays = [
 	{name: 'Otis', totalVacationDays: 25, usedVacationDays: 7},
 ];
 
+const txtBetween = ' heeft nog '
+const txtEnd = " vakantiedagen over.'"
+
+for (let i = 0; i <vacationDays.length ; i++) {
+	console.log(vacationDays[i].name + txtBetween + (vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays) + txtEnd);
+
+}
 
 // ==========================================
 // Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
