@@ -11,8 +11,14 @@
 // Vergadering om 17:00
 // ==========================================
 
-const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
+// INPUT: array meetingTimes
+// OUTPUT: zie uitkomst
+// STEPS: maak van index meetingTime een i en log i met string
 
+const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
+for (let j = 0; j < meetingTimes.length; j++) {
+    console.log("Vergadering om "+ meetingTimes[j]);
+}
 
 // ==========================================
 // Opdracht 2. In tegenstelling tot Bob, werken de andere medewerkers van Loop-it Solutions wél hard.
@@ -25,8 +31,16 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // console.log(salaries) geeft [3360, 2467.5, 2940, 3675, 2940]
 // ==========================================
 
-const salaries = [3200, 2350, 2800, 3500, 2800];
+// INPUT: array salaries
+// OUTPUT: zie uitkomst
+// STEPS: itereer de array, vermenigvuldig elk bedrag met 1,05
 
+
+
+const salaries = [3200, 2350, 2800, 3500, 2800];
+for (let j = 0; j < salaries.length; j++) {
+    console.log(salaries[j] * 1.05);
+}
 
 // ==========================================
 // Opdracht 3. Eén van Bob's taken is medewerkers feliciteren met hun "zoveelste" verjaardag.
@@ -37,7 +51,14 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // console.log(birthYears) geeft [30, 28, 35, 22, 43]
 // ==========================================
 
+// INPUT: array birthYears
+// OUTPUT: zie uitkomst
+// STEPS: itereer de array, trek de array af van 2025
+
 const birthYears = [1995, 1997, 1990, 2003, 1982];
+for (let j = 0; j < birthYears.length; j++) {
+    console.log(2025 - birthYears[j]);
+}
 
 
 // ==========================================
@@ -50,7 +71,18 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // console.log(leaveHours) geeft [12, 4.5, 4, 3.5, 1.5]
 // ==========================================
 
+// INPUT: array leaveHours
+// OUTPUT: zie uitkomst
+// STEPS: itereer de array, selecteer de even uren en vermenigvuldig die met 2 en anders met 0,5
+
 const leaveHours = [6, 9, 2, 7, 3];
+for (let j = 0; j < leaveHours.length; j++) {
+    if (leaveHours[j] % 2 === 0) {
+        console.log(leaveHours[j] * 2);
+    } else {
+        console.log(leaveHours[j] * 0.5);
+    }
+}
 
 
 // ==========================================
@@ -66,7 +98,16 @@ const leaveHours = [6, 9, 2, 7, 3];
 // console.log(productionCodes) geeft ['ABC123', 'DEF456', 'GHI789', 'JKL012']
 
 // ==========================================
+// INPUT: array
+// OUTPUT: zie uitkomst
+// STEPS: wijs de alles in hoofdletters parameter toe
+// wijs de wis spatiess functie toe
+// itereer de array,
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
+for (let j = 0; j < productionCodes.length; j++) {
+    console.log(productionCodes[j].toUpperCase().trim());
+}
+
 
 

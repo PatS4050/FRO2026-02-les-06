@@ -21,6 +21,20 @@
 // klaar!
 // ==========================================
 
+// INPUT: een for loop en text log loop en klaar
+// OUTPUT: Zie uitkomst
+// STEPS: maak een for loop tot 5
+// als index is de laatste dan print klaar en anders loop
+
+for (let i = 0; i < 5; i++) {
+    if (i === 4) {
+        console.log("klaar")
+    } else {
+        console.log("loop");
+
+    }
+
+}
 
 // ==========================================
 // Opdracht 3. Maak een for-loop die automatisch factuurnummers genereert in het formaat INV-0001, INV-0002, enzovoorts. Zorg ervoor dat je begint bij nummer 1 en dat de nummers oplopen. Er zijn in totaal 8 factuurnummers nodig.
@@ -36,6 +50,15 @@
 // 'INV-0008'
 
 // ==========================================
+
+// INPUT: een for loop en text log nimmer met i
+// OUTPUT: Zie uitkomst
+// STEPS: maak een for loop van 1 tot 9
+// log nummer + i
+
+for (let i = 1; i < 9; i++) {
+    console.log('INV-000'+ i )
+}
 
 // ==========================================
 // Opdracht 4. Schrijf een for-loop die van 9 tot en met 18 loopt en de uren logt.
@@ -57,6 +80,26 @@
 // ==========================================
 
 
+// INPUT: een for loop die uren telt i
+// OUTPUT: Zie uitkomst
+// STEPS: maak een for loop van 9 tot 19
+// log nummer + i ":00"
+// if 12 = Lunchpauze
+// if 17 = Bijna klaar
+
+for (let i = 9; i < 19; i++) {
+    if (i === 12) {
+        console.log(i + ':00 Lunchpauze');
+    } else if (i === 17) {
+        console.log(i + ':00 Bijna klaar!');
+    } else if (i === 10 || i === 14) {
+        console.log(i + ':00 Koffiepauze');
+    }
+    else {
+    console.log(i + ':00');
+}}
+
+
 // ==========================================
 // Opdracht 5. Maak een for-loop die van 0 tot 9 loopt en de getallen 0 tot 9 logt.
 // Echter, vanaf het getal 3 komt er een > voor ieder getal te staan, en vanaf het getal 6 komt er >> voor ieder getal te staan.
@@ -72,6 +115,21 @@
 // >> 8
 // >> 9
 // ==========================================
+
+// INPUT: een for loop met i
+// OUTPUT: Zie uitkomst
+// STEPS: maak een for loop van 0 tot 10
+// log numer + i en  groter als 3 een > ervoor
+// log numer + i en  groter als 6 een >> ervoor
+
+for (let i = 0; i < 10; i++) {
+    if (i >= 3 && i <= 5) {
+        console.log('>' + i);
+    } else if (i >= 6){
+        console.log('>>' + i);
+    } else {
+        console.log(i);
+    }}
 
 
 // ==========================================
@@ -112,5 +170,20 @@
 // etc.
 // ==========================================
 
+// INPUT: een for loop met i
+// OUTPUT: Zie uitkomst
+// STEPS: maak een for loop van 0 tot 100
+// log nummer + i  % 3 = 0 log Fizz
+// log nummer + i  % 5 = 0 log Buzz
 
 
+for (let i = 0; i < 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+    console.log("FizzBuzz");
+} else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+} else {
+        console.log(i)
+    }}

@@ -15,13 +15,27 @@
 // 	'Beste Otis, je salaris van €2800,- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.',
 // ==========================================
 
+// INPUT : object
+// OUTPUT: zie voorbeels
+// STEPS:
+// itereer de salarissen op basis van length
+// voeg de tekst toe
+
 const salaryDetails = [
-	{name: 'Max', salary: 3200},
-	{name: 'Sophia', salary: 2350},
-	{name: 'Ali', salary: 2800},
-	{name: 'Nina', salary: 3500},
-	{name: 'Otis', salary: 2800}
+    {name: 'Max', salary: 3200},
+    {name: 'Sophia', salary: 2350},
+    {name: 'Ali', salary: 2800},
+    {name: 'Nina', salary: 3500},
+    {name: 'Otis', salary: 2800}
 ];
+const textPre = "Beste "
+const textMiddle = ", je salaris van €"
+const textEnd = ",- is zojuist overgemaakt. Val me nu alsjeblieft niet meer lastig.'"
+
+for (let i = 0; i < salaryDetails.length; i++) {
+    console.log(textPre + salaryDetails[i].name + textMiddle + salaryDetails[i].salary + textEnd);
+
+}
 
 // ==========================================
 // Opdracht 2. Wanneer iemand een verlof-aanvraag doet, moet Bob eerst uit zijn hoofd uitrekenen of deze medewerker nog
@@ -36,14 +50,29 @@ const salaryDetails = [
 // 	'Otis heeft nog 18 vakantiedagen over.',
 // ==========================================
 
+// INPUT : object
+// OUTPUT: zie voorbeeld
+// STEPS:
+// itereer de vakantiedagen op basis van length
+// itereer de gebruikte dagen
+// trek de dagen van elkaar af
+// voeg de tekst toe
+
 const vacationDays = [
-	{name: 'Max', totalVacationDays: 25, usedVacationDays: 10},
-	{name: 'Sophia', totalVacationDays: 30, usedVacationDays: 15},
-	{name: 'Ali', totalVacationDays: 20, usedVacationDays: 18},
-	{name: 'Nina', totalVacationDays: 25, usedVacationDays: 5},
-	{name: 'Otis', totalVacationDays: 25, usedVacationDays: 7},
+    {name: 'Max', totalVacationDays: 25, usedVacationDays: 10},
+    {name: 'Sophia', totalVacationDays: 30, usedVacationDays: 15},
+    {name: 'Ali', totalVacationDays: 20, usedVacationDays: 18},
+    {name: 'Nina', totalVacationDays: 25, usedVacationDays: 5},
+    {name: 'Otis', totalVacationDays: 25, usedVacationDays: 7},
 ];
 
+const txtBetween = ' heeft nog '
+const txtEnd = " vakantiedagen over.'"
+
+for (let i = 0; i < vacationDays.length; i++) {
+    console.log(vacationDays[i].name + txtBetween + (vacationDays[i].totalVacationDays - vacationDays[i].usedVacationDays) + txtEnd);
+
+}
 
 // ==========================================
 // Opdracht 3. Bob heeft een lijst van medewerkers en de opleidingen die ze volgen. Hij wil weten wie er een opleiding volgen
@@ -55,13 +84,30 @@ const vacationDays = [
 // Ali: Communicatietraining
 // ==========================================
 
+// INPUT : object
+// OUTPUT: zie voorbeeld
+// STEPS:
+// itereer de month en selct op jan
+// itereer de training en namen
+// voeg de tekst toe
+
+
 const employeesInTraining = [
-	{name: 'Max', training: 'Leiderschapstraining', month: 'Januari'},
-	{name: 'Sophia', training: 'Projectmanagement', month: 'Februari'},
-	{name: 'Ali', training: 'Communicatietraining', month: 'Januari'},
-	{name: 'Nina', training: 'Teamworktraining', month: 'Maart'},
-	{name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
+    {name: 'Max', training: 'Leiderschapstraining', month: 'Januari'},
+    {name: 'Sophia', training: 'Projectmanagement', month: 'Februari'},
+    {name: 'Ali', training: 'Communicatietraining', month: 'Januari'},
+    {name: 'Nina', training: 'Teamworktraining', month: 'Maart'},
+    {name: 'Otis', training: 'Teamworktraining', month: 'Februari'},
 ];
+
+const txtOpg3 = ": "
+
+for (let i = 0; i < employeesInTraining.length; i++) {
+    if (employeesInTraining[i].month === "Januari") {
+        console.log(employeesInTraining[i].name + txtOpg3 + employeesInTraining[i].training);
+    }
+
+}
 
 // ==========================================
 // Opdracht 4a. Medewerkers worden ieder jaar beoordeelt op hun functioneren. Het is aan Bob om de scores om te zetten
@@ -81,13 +127,37 @@ const employeesInTraining = [
 // 6%
 // ==========================================
 
+// INPUT : object
+// OUTPUT: zie voorbeeld
+// STEPS:
+// maak if statement om de scores te laten overeenkomen met percentages
+// itereer de increase
+// voeg de tekst toe
+
 const scores = [
-	{name: 'Max', score: 83, salaryIncrease: null},
-	{name: 'Sophia', score: 77, salaryIncrease: null},
-	{name: 'Ali', score: 92, salaryIncrease: null},
-	{name: 'Nina', score: 66, salaryIncrease: null},
-	{name: 'Otis', score: 100, salaryIncrease: null},
+    {name: 'Max', score: 83, salaryIncrease: null},
+    {name: 'Sophia', score: 77, salaryIncrease: null},
+    {name: 'Ali', score: 92, salaryIncrease: null},
+    {name: 'Nina', score: 66, salaryIncrease: null},
+    {name: 'Otis', score: 100, salaryIncrease: null},
 ];
+
+// const txtOpg4a = '%'
+//
+// for (let i = 0; i < scores.length; i++) {
+// 	if (scores[i].score <= 60) {
+// 		 scores[i].salaryIncrease = 0;
+// 	}if (scores[i].score >= 59 && scores[i].score <= 70) {
+// 		 scores[i].salaryIncrease = 2;
+// 	}if (scores[i].score >= 69 && scores[i].score <= 90) {
+// 		 scores[i].salaryIncrease = 3;
+// 	}if (scores[i].score >= 89 && scores[i].score <= 100) {
+// 		 scores[i].salaryIncrease = 4;
+// 	}if (scores[i].score === 100) {
+// 		 scores[i].salaryIncrease = 6;
+// 	}
+// 	console.log(scores[i].salaryIncrease + txtOpg4a);
+// }
 
 // ==========================================
 // Opdracht 4b. Breid je script uit door het percentage op te slaan in de 'salaryIncrease'-property van ieder object in de array.
@@ -104,6 +174,29 @@ const scores = [
 // ];
 // ==========================================
 
+const txtOpg4a = '%'
+
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i].salaryIncrease === null) {
+        if (scores[i].score <= 60) {
+            scores[i].salaryIncrease = 0;
+        }
+        if (scores[i].score >= 59 && scores[i].score <= 70) {
+            scores[i].salaryIncrease = 2;
+        }
+        if (scores[i].score >= 69 && scores[i].score <= 90) {
+            scores[i].salaryIncrease = 3;
+        }
+        if (scores[i].score >= 89 && scores[i].score <= 100) {
+            scores[i].salaryIncrease = 4;
+        }
+        if (scores[i].score === 100) {
+            scores[i].salaryIncrease = 6;
+        }
+    }
+    console.log(scores[i].salaryIncrease + txtOpg4a);
+    // console.log(scores[i]);
+}
 
 
 // ==========================================
@@ -123,13 +216,35 @@ const scores = [
 // ]
 // ==========================================
 
+// INPUT : object
+// OUTPUT: zie voorbeeld
+// STEPS:
+// itereer de array
+// maak voor elke array component een key email aan
+// wijs deze key de naam.achternaam@email toe
+// itereer de array
+
+
 const employees = [
-	{firstName: 'Max', lastName: 'Janssen'},
-	{firstName: 'Sophia', lastName: 'Vries'},
-	{firstName: 'Ali', lastName: 'Bakir'},
-	{firstName: 'Nina', lastName: 'Berg'},
-	{firstName: 'Otis', lastName: 'Kuiper'},
+    {firstName: 'Max', lastName: 'Janssen'},
+    {firstName: 'Sophia', lastName: 'Vries'},
+    {firstName: 'Ali', lastName: 'Bakir'},
+    {firstName: 'Nina', lastName: 'Berg'},
+    {firstName: 'Otis', lastName: 'Kuiper'},
 ];
+for (let i = 0; i < employees.length; i++) {
+    obj = employees[i].email = employees[i].firstName + "." + employees[i].lastName + "@loop-it-solutions.nl";
+    const email = employees[i].firstName ;
+    console.log(employees[i].email.toLowerCase());
+}
+
+// for (let i = 0; i < employees.length; i++) {
+//     let key = [employees[i].email];
+//     obj = {
+//         [email]: [employees[i].firstName + "." + employees[i].lastName],
+//     }
+//     // console.log(employees[i]);
+// }
 
 // ==========================================
 // Opdracht 6 (BONUS). Bob wil dat alle e-mailadressen in kleine letters worden opgeslagen, zodat ze consistent zijn.
