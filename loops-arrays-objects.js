@@ -232,6 +232,11 @@ const employees = [
     {firstName: 'Nina', lastName: 'Berg'},
     {firstName: 'Otis', lastName: 'Kuiper'},
 ];
+for (let i = 0; i < employees.length; i++) {
+    obj = employees[i].email = employees[i].firstName + "." + employees[i].lastName + "@loop-it-solutions.nl";
+    const email = employees[i].firstName ;
+    console.log(employees[i].email.toLowerCase());
+}
 
 // for (let i = 0; i < employees.length; i++) {
 //     let key = [employees[i].email];
